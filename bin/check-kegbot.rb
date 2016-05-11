@@ -80,9 +80,9 @@ class Kegbot < Sensu::Plugin::Check::CLI
 
     if warn_taps.empty? && crit_taps.empty?
       ok 'All kegs above thresholds'
-    elsif crit_taps.size > 0
+    elsif !crit_taps.empty?
       critical crit_taps.join(', ')
-    elsif warn_taps.size > 0
+    elsif !warn_taps.empty?
       warning warn_taps.join(', ')
     end
   end

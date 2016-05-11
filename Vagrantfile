@@ -3,7 +3,7 @@
 
 require 'json'
 
-VAGRANTFILE_API_VERSION = '2'
+VAGRANTFILE_API_VERSION = '2'.freeze
 
 # Read in the configuration file for the vagrant environment
 config_file = JSON.parse(File.read('../GIR/config/vagrant_config.json'))
